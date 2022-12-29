@@ -1,0 +1,115 @@
+.experience {
+  &__wrapper {
+    margin-top: 80px;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+  &__button {
+    font-size: 26px;
+    font-weight: 600;
+    transition: all 0.40s ease;
+    cursor: pointer;
+    &_active {
+      color: #eb4a4a;
+    }
+    &:hover {
+      transform: scale(1.01) translateY(-5px);
+      color: #eb4a4a;
+    }
+  }
+  &__heading {
+    margin-left: 8px;
+  }
+  // &__sections {
+  //   background-color: #12141c;
+  // }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+    column-gap: 20px;
+    // &_active {
+    //   display: grid;
+    // }
+    // &_hidden {
+    //   display: none;
+    // }
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 30px;
+    &_item1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      @include before-circle;
+      @include after-line;
+      &::before {
+        right: -20px;
+      }
+      &::after {
+        right: calc(-10px - 1px/2);
+        top: 10px;
+      }
+    }
+    &_item2 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      @include before-circle;
+      @include after-line;
+      &::before {
+        left: -20px;
+      }
+      &::after {
+        left: calc(-10px - 1px/2);
+        top: 10px;
+      }
+    }
+    &_item3 {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      @include before-circle;
+      @include after-line;
+      &::before {
+        right: -20px;
+      }
+      &::after {
+        right: -10px;
+        top: 10px;
+      }
+    }
+    &_item4 {
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+      @include before-circle;
+      @include after-line;
+      &::before {
+        left: -20px;
+      }
+      &::after {
+        left: calc(-10px - 1px/2);
+        top: 10px;
+      }
+    }
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #eb4a4a;
+  }
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  &__calendar {
+    font-size: 18px;
+    color: gray;
+  }
+  &__text {
+    margin-left: 4px;
+  }
+}

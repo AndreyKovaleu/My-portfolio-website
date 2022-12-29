@@ -1,0 +1,37 @@
+.skills {
+  &__wrapper {
+    margin-top: 80px;
+    display: grid;
+    grid-template: repeat(4, minmax(320px, auto)) / repeat(4, 1fr);
+    gap: 16px;
+    justify-content: center;
+    grid-auto-rows: 320px;
+  }
+  &__item {
+    background: $other-color;
+    border-radius: 8px;
+    padding: 30px 30px 25px 30px;
+    transition: all 0.40s ease;
+    &:hover {
+      transform: scale(1.01) translateY(-5px);
+      h3 {
+        color: $main-color;
+      }
+    }
+  }
+  &__img {
+    height: 65px;
+    width: auto;
+  }
+  &__heading {
+    margin: 15px 0;
+    font-size: 24px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+  }
+  &__desc {
+    color: $second-color;
+    font-size: $p-font;
+    line-height: 30px;
+  }
+}

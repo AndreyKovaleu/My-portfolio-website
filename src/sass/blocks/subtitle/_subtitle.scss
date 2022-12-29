@@ -1,0 +1,14 @@
+.subtitle {
+  color: $main-color;
+  font-size: $h3-font-size;
+  font-weight: 600;
+  &_center {
+    text-align: center;
+  }
+  &_left {
+    text-align: left;
+  }
+  &_m16 {
+    margin-bottom: 16px;
+  }
+}

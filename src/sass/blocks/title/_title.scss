@@ -1,0 +1,10 @@
+.title {
+  font-size: $h2-font;
+  margin-bottom: 10px;
+  &_center {
+    text-align: center;
+  }
+  &_left {
+    text-align: left;
+  }
+}

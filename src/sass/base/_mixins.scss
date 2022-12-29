@@ -1,0 +1,20 @@
+@mixin before-circle {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #eb4a4a;
+  }
+}
+
+@mixin after-line {
+ &::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: calc(100% + 30px);
+  background: #eb4a4a;
+ }
+}

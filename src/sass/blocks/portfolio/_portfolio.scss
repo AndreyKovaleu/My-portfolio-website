@@ -1,0 +1,44 @@
+.portfolio {
+  &__wrapper {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    gap: 2rem;
+  }
+  &__item {
+    padding: 25px;
+    background: #12141c;
+    border-radius: 0.5rem;
+    transition: all 0.40s ease;
+    &:hover {
+      transform: scale(1.01) translateY(-5px);
+      cursor: pointer;
+    }
+  }
+  &__img {
+    height: auto;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    &-text {
+      color: $main-color;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    &-icon {
+      font-size: 21px;
+    }
+  }
+  &__heading {
+    font-size: 25px;
+    font-weight: 700;
+  }
+}

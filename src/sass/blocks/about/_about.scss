@@ -1,0 +1,21 @@
+.about {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    gap: 100px;
+  }
+  &__img {
+    height: auto;
+    width: 100%;
+    max-width: 460px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  &__text {
+    color: $second-color;
+    font-size: $p-font;
+    line-height: 30px;
+    margin-bottom: 32px;
+  }
+}
