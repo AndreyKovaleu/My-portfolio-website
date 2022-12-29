@@ -1,0 +1,52 @@
+%title {
+  font-size: $h2-fs;
+  margin-bottom: 10px;
+}
+
+%subtitle {
+  color: $second-col;
+  font-size: $h3-fs;
+  font-weight: 600;
+}
+
+%text {
+  color: $third-col;
+  font-size: $p-fs;
+  line-height: 30px;
+}
+
+%btn {
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  background: $second-col;
+  color: $first-col;
+  border: 1px solid $second-col;
+  transition: all 0.40s ease;
+  &:hover {
+    transform: scale(1.01) translateY(-5px);
+    background: transparent;
+  }
+}
+
+%before-circle {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $second-col;
+  }
+}
+
+%after-line {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: calc(100% + 30px);
+    background: $second-col;
+   }
+}

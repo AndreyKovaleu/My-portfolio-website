@@ -12,10 +12,19 @@
     object-fit: cover;
     border-radius: 8px;
   }
+  &__title {
+    @extend %title;
+  }
+  &__subtitle {
+    @extend %subtitle;
+    margin-bottom: 16px;
+  }
   &__text {
-    color: $second-color;
-    font-size: $p-font;
-    line-height: 30px;
+    @extend %text;
     margin-bottom: 32px;
+  }
+  &__btn-link {
+    @extend %btn;
+    padding: 14px 40px;
   }
 }

@@ -1,4 +1,12 @@
 .experience {
+  &__title {
+    @extend %title;
+    text-align: center;
+  }
+  &__subtitle {
+    @extend %subtitle;
+    text-align: center;
+  }
   &__wrapper {
     margin-top: 80px;
   }
@@ -10,34 +18,30 @@
   &__button {
     font-size: 26px;
     font-weight: 600;
-    transition: all 0.40s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
     &_active {
-      color: #eb4a4a;
+      color: $second-col;
     }
     &:hover {
       transform: scale(1.01) translateY(-5px);
-      color: #eb4a4a;
+      color: $second-col;
     }
   }
-  &__heading {
-    margin-left: 8px;
+  &__icon {
+
   }
-  // &__sections {
-  //   background-color: #12141c;
-  // }
+  &__heading {
+    margin-left: 4px;
+  }
+  &__sections {
+
+  }
   &__content {
     display: grid;
-    grid-template-columns: repeat(2, 500px);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
-    justify-content: center;
-    column-gap: 20px;
-    // &_active {
-    //   display: grid;
-    // }
-    // &_hidden {
-    //   display: none;
-    // }
+    column-gap: 100px;
   }
   &__item {
     position: relative;
@@ -45,69 +49,70 @@
     &_item1 {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
-      @include before-circle;
-      @include after-line;
+      @extend %before-circle;
+      @extend %after-line;
       &::before {
-        right: -20px;
+        right: -60px;
       }
       &::after {
-        right: calc(-10px - 1px/2);
+        right: calc(-50px - 1px/2);
         top: 10px;
       }
     }
     &_item2 {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
-      @include before-circle;
-      @include after-line;
+      @extend %before-circle;
+      @extend %after-line;
       &::before {
-        left: -20px;
+        left: -60px;
       }
       &::after {
-        left: calc(-10px - 1px/2);
+        left: calc(-50px - 1px/2);
         top: 10px;
       }
     }
     &_item3 {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
-      @include before-circle;
-      @include after-line;
+      @extend %before-circle;
+      @extend %after-line;
       &::before {
-        right: -20px;
+        right: -60px;
       }
       &::after {
-        right: -10px;
+        right: calc(-50px - 1px/2);
         top: 10px;
       }
     }
     &_item4 {
       grid-column: 2 / 3;
       grid-row: 4 / 5;
-      @include before-circle;
-      @include after-line;
+      @extend %before-circle;
+      @extend %after-line;
       &::before {
-        left: -20px;
+        left: -60px;
       }
       &::after {
-        left: calc(-10px - 1px/2);
+        left: calc(-50px - 1px/2);
         top: 10px;
       }
     }
   }
-  &__title {
-    font-size: 22px;
+  &__paragraph {
+    font-size: $h3-fs;
     font-weight: 600;
-    color: #eb4a4a;
+    margin-bottom: 10px;
   }
-  &__subtitle {
-    font-size: 20px;
+  &__info {
+    font-size: $h5-fs;
     font-weight: 400;
     margin-bottom: 16px;
+    color: $second-col;
   }
   &__calendar {
-    font-size: 18px;
-    color: gray;
+    font-size: $p-fs;
+    color: $third-col;
   }
   &__text {
     margin-left: 4px;
