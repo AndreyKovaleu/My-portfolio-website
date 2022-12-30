@@ -1,37 +1,65 @@
 .skills {
-  &__wrapper {
-    margin-top: 80px;
-    display: grid;
-    grid-template: repeat(4, minmax(320px, auto)) / repeat(4, 1fr);
-    gap: 16px;
-    justify-content: center;
-    grid-auto-rows: 320px;
+  padding-top: 140px;
+  padding-bottom: 50px;
+  &__title {
+    @extend %title;
+    text-align: center;
   }
-  &__item {
-    background: $other-color;
-    border-radius: 8px;
-    padding: 30px 30px 25px 30px;
+  &__subtitle {
+    @extend %subtitle;
+    text-align: center;
+  }
+  &__wrapper {
+    position: relative;
+    margin-top: 80px;
+  }
+  &__slider-box {
+    overflow: hidden;
+  }
+  &__slider {
+    display: flex;
     transition: all 0.40s ease;
-    &:hover {
-      transform: scale(1.01) translateY(-5px);
-      h3 {
-        color: $main-color;
-      }
-    }
+  }
+  &__slide {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 16px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    background: $bg-item-col;
+    border-radius: 8px;
+    padding: 30px;
   }
   &__img {
+    margin: 0 auto;
     height: 65px;
     width: auto;
   }
   &__heading {
     margin: 15px 0;
-    font-size: 24px;
+    text-align: center;
+    font-size: $h3-fs;
     font-weight: 600;
     transition: all 0.4s ease;
   }
-  &__desc {
-    color: $second-color;
-    font-size: $p-font;
-    line-height: 30px;
+  &__carousel-indicators {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+  }
+  &__indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $first-col;
+    margin-right: 8px;
+    margin-left: 8px;
+    transition: all 0.40s ease;
+    cursor: pointer;
   }
 }
