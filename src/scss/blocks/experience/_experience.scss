@@ -1,0 +1,121 @@
+.experience {
+  padding-top: 140px;
+  &__title {
+    @extend %title;
+    text-align: center;
+  }
+  &__subtitle {
+    @extend %subtitle;
+    text-align: center;
+  }
+  &__wrapper {
+    margin-top: 80px;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+  &__button {
+    font-size: $fs-26;
+    font-weight: $fw-6;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    &_active {
+      color: $col-second;
+    }
+    &:hover {
+      transform: scale(1.01) translateY(-5px);
+      color: $col-second;
+    }
+  }
+  &__icon {
+
+  }
+  &__heading {
+    margin-left: 4px;
+  }
+  &__sections {
+
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    column-gap: 100px;
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 30px;
+    &_item1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      @extend %before-circle;
+      @extend %after-line;
+      &::before {
+        right: -60px;
+      }
+      &::after {
+        right: calc(-50px - 1px/2);
+        top: 10px;
+      }
+    }
+    &_item2 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      @extend %before-circle;
+      @extend %after-line;
+      &::before {
+        left: -60px;
+      }
+      &::after {
+        left: calc(-50px - 1px/2);
+        top: 10px;
+      }
+    }
+    &_item3 {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      @extend %before-circle;
+      @extend %after-line;
+      &::before {
+        right: -60px;
+      }
+      &::after {
+        right: calc(-50px - 1px/2);
+        top: 10px;
+      }
+    }
+    &_item4 {
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+      @extend %before-circle;
+      @extend %after-line;
+      &::before {
+        left: -60px;
+      }
+      &::after {
+        left: calc(-50px - 1px/2);
+        top: 10px;
+      }
+    }
+  }
+  &__paragraph {
+    font-size: $fs-24;
+    font-weight: $fw-6;
+    margin-bottom: 10px;
+  }
+  &__info {
+    font-size: $fs-20;
+    font-weight: $fw-4;
+    margin-bottom: 16px;
+    color: $col-second;
+  }
+  &__calendar {
+    font-size: $fs-18;
+    color: $col-text;
+  }
+  &__text {
+    margin-left: 4px;
+  }
+}

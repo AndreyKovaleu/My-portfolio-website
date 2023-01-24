@@ -1,0 +1,80 @@
+.portfolio {
+  padding-top: 140px;
+  &__title {
+    @extend %title;
+    text-align: center;
+  }
+  &__subtitle {
+    @extend %subtitle;
+    text-align: center;
+  }
+  &__wrapper {
+    margin-top: 80px;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+  &__button {
+    font-size: $fs-26;
+    font-weight: $fw-6;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    &_active {
+      color: $col-second;
+    }
+    &:hover {
+      transform: scale(1.01) translateY(-5px);
+      color: $col-second;
+    }
+  }
+  &__text {
+    margin-left: 4px;
+  }
+  &__sections {
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, auto));
+    align-items: center;
+    gap: 32px;
+  }
+  &__item {
+    padding: 25px;
+    background: $col-item;
+    border-radius: $br-8;
+    transition: all 0.4s ease;
+    &:hover {
+      transform: scale(1.01) translateY(-5px);
+    }
+  }
+  &__link {
+    color: $col-main;
+  }
+  &__img {
+    height: auto;
+    width: 100%;
+    border-radius: $br-8;
+    margin-bottom: 24px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    &-text {
+      color: $col-second;
+      font-size: $fs-16;
+      font-weight: $fw-5;
+      letter-spacing: 1px;
+    }
+    &-icon {
+      font-size: $fs-21;
+    }
+  }
+  &__heading {
+    font-size: $fs-25;
+    font-weight: $fw-7;
+  }
+}

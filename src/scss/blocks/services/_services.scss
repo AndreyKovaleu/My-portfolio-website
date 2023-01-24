@@ -1,0 +1,43 @@
+.services {
+  padding-top: 140px;
+  &__title {
+    @extend %title;
+    text-align: center;
+  }
+  &__subtitle {
+    @extend %subtitle;
+    text-align: center;
+  }
+  &__wrapper {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    text-align: center;
+    gap: 32px;
+  }
+  &__item {
+    padding: 45px;
+    background: $col-item;
+    border-top: 5px solid $col-item;
+    border-radius: $br-8;
+    transition: all 0.4s ease;
+    &:hover {
+      transform: scale(1.01) translateY(-5px);
+      border-top: 5px solid $col-second;
+      .services__heading {
+        color: $col-second;
+      }
+    }
+  }
+  &__heading {
+    margin: 15px 0;
+    font-size: $fs-24;
+    font-weight: $fw-6;
+    transition: all 0.4s ease;
+  }
+  &__desc {
+    color: $col-text;
+    font-size: $fs-18;
+    line-height: 30px;
+  }
+}

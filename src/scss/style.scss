@@ -1,0 +1,36 @@
+// base
+@import "base/fonts";
+@import "base/variables";
+@import "base/templates";
+@import "base/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $col-bg;
+  color: $col-main;
+}
+
+// desktop
+@import "blocks/header/header";
+@import "blocks/container/container";
+@import "blocks/navbar/navbar";
+@import "blocks/home/home";
+@import "blocks/about/about";
+@import "blocks/experience/experience";
+@import "blocks/skills/skills";
+@import "blocks/services/services";
+@import "blocks/portfolio/portfolio";
+@import "blocks/contact/contact";
+@import "blocks/form/form";
+@import "blocks/footer/footer";
+
+// mobile

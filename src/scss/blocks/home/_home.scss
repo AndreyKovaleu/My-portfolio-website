@@ -1,0 +1,29 @@
+.home {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("../img/home/background.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  &__text {
+    font-size: $fs-24;
+    font-weight: $fw-6;
+  }
+  &__title {
+    margin: 20px 0;
+    color: $col-second;
+    font-size: $fs-84;
+    font-weight: $fw-7;
+    line-height: 1.1;
+    letter-spacing: 2px;
+  }
+  &__subtitle {
+    font-size: $fs-24;
+    font-weight: $fw-6;
+    margin-bottom: 48px;
+  }
+  &__btn {
+    @extend %btn;
+    padding: 14px 40px;
+  }
+}

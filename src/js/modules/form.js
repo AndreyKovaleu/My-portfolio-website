@@ -1,5 +1,4 @@
 function form() {
-
   // Отправка формы в телеграмм
 
   const TOKEN   = "5903770777:AAHB6f183fe3t863b91H3E3MPF1li7XNBGU";

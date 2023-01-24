@@ -1,0 +1,52 @@
+%title {
+  font-size: $fs-56;
+  margin-bottom: 10px;
+}
+
+%subtitle {
+  color: $col-second;
+  font-size: $fs-24;
+  font-weight: $fw-6;
+}
+
+%text {
+  color: $col-text;
+  font-size: $fs-18;
+  line-height: 30px;
+}
+
+%btn {
+  display: inline-block;
+  border-radius: $br-8;
+  font-size: $fs-17;
+  font-weight: $fw-5;
+  background: $col-second;
+  color: $col-main;
+  border: 1px solid $col-second;
+  transition: all 0.4s ease;
+  &:hover {
+    transform: scale(1.01) translateY(-5px);
+    background: transparent;
+  }
+}
+
+%before-circle {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $col-second;
+  }
+}
+
+%after-line {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: calc(100% + 20px);
+    background: $col-second;
+   }
+}

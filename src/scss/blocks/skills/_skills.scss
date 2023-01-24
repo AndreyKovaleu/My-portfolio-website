@@ -1,0 +1,64 @@
+.skills {
+  padding: 140px 0 50px 0;
+  &__title {
+    @extend %title;
+    text-align: center;
+  }
+  &__subtitle {
+    @extend %subtitle;
+    text-align: center;
+  }
+  &__wrapper {
+    position: relative;
+    margin-top: 80px;
+  }
+  &__slider-box {
+    overflow: hidden;
+  }
+  &__slider {
+    display: flex;
+    transition: all 0.4s ease;
+  }
+  &__slide {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 16px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    background: $col-item;
+    border-radius: $br-8;
+    padding: 30px;
+  }
+  &__img {
+    margin: 0 auto;
+    height: 65px;
+    width: auto;
+  }
+  &__heading {
+    margin: 15px 0;
+    text-align: center;
+    font-size: $fs-24;
+    font-weight: $fw-6;
+    transition: all 0.4s ease;
+  }
+  &__carousel-indicators {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+  }
+  &__indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $col-main;
+    margin-right: 8px;
+    margin-left: 8px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+}
